@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="test2"></h1>
+    <script>
+      let num1 = prompt("시험 점수를 입력하세요.");
+      let message;
+
+      if (90 <= num1 && num1 <= 100) {
+        message = "A";
+      } else if (80 <= num1 && num1 <= 89) {
+        message = "B";
+      } else if (70 <= num1 && num1 <= 79) {
+        message = "C";
+      } else if (60 <= num1 && num1 <= 69) {
+        message = "D";
+      } else if (0 <= num1 && num1 <= 59) {
+        message = "F";
+      } else {
+        message = "점수를 다시 입력하세요.";
+      }
+
+      document.getElementById("test2").innerHTML = message;
+    </script>
+  </body>
+</html>
