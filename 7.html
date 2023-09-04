@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = { name: "John" };
+      let admin = { name: "Admin" };
+
+      function sayHi() {
+        alert(this.name);
+      }
+
+      user.f = sayHi; //별개의 객체에서 동일한 함수를 사용함
+      admin.f = sayHi; //별개의 객체에서 동일한 함수를 사용함
+
+      user.f(); // this == user, John 출력
+      admin.f(); // this == admin, Admin 출력
+
+      admin["f"](); // 점과 대괄호는 동일하게 동작함. // this == admin, Admin 출력
+    </script>
+  </body>
+</html>

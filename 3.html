@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = {
+        name: "John",
+        age: 30,
+        isAdmin: true,
+      };
+
+      for (let QQQ in user) {
+        //key를 QQQ로 입력하더라도 모두 똑같이만 입력하면 변수 이름은 다른 것을 사용해도 상관X
+        //여기서의 in은 값이 있느냐를 따지는 것이 아니라 user 안에 있는 key를 의미 함
+        alert(QQQ); //name, age, isAdmin
+        alert(user[QQQ]); // John, 30, true
+      }
+    </script>
+  </body>
+</html>

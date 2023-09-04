@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isEmpty(schedule) {
+        for (let key in schedule) {
+          return false;
+        }
+        return true;
+      }
+
+      let schedule = {};
+
+      alert(isEmpty(schedule)); // ture
+
+      schedule["8:30"] = "get up"; //8:30가 key값, get up이 value값으로 schedule에 프로퍼티 추가
+
+      alert(isEmpty(schedule)); //false
+    </script>
+  </body>
+</html>

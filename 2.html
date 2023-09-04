@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function makeUser(name, age) {
+        return {
+          name: name, //name,으로 단축해서 사용 가능 (단축 프로퍼티)
+          age: age, //마찬가지로 age,로 단축해서 사용 가능
+        };
+      }
+
+      let user = makeUser("john", 30);
+      alert(user.name);
+      alert(user.age);
+      user.isAdmin = true; // 기존에 있던 속성이라면 프로퍼티 추가되고 없었던 속성이면 프로퍼티 추가 됨
+      alert(user.isAdmin);
+
+      user.age = 17;
+      alert(user.age);
+
+      delete user.age; //객체 프로퍼티 삭제
+      alert(user.age); //삭제한 것 출력했으니까 undefined 출력됨
+
+      alert("age" in user); //user에 age가 있는가? 삭제해서 없음 = false 출력됨
+      alert("name" in user); //user에 name이 있는가? 있음 = true 출력됨
+    </script>
+  </body>
+</html>
